@@ -7,6 +7,8 @@ language: node_js
 env:
   global:
   - NODE_ENV='test'
+  - DOCKER_USER='prh83+prh83'
+  - DOCKER_PASSWORD='5HNY9Q13Y4OMNUR7C5TPFASKI9ZGXO0TPGI6MYFVZ9BGZV4OV8PQFJFDPC5FFBD6'
 
 branches:
   only:
@@ -28,6 +30,7 @@ before_script:
 script:
   - make qa
   - TRAVIS_BUILD_ID=$TRAVIS_BUILD_ID TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make brand
+  - DOCKER_USERNAME=$DOCKER_USERNAME DOCKER_PASSWORD=$DOCKER_PASSWORD make build
 
 matrix:
   include:
