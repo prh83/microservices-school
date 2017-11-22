@@ -13,4 +13,5 @@ ensure-dependencies:
 
 build:
 	@docker login -u=$(DOCKER_USERNAME) -p=$(DOCKER_PASSWORD) quay.io
-	
+	@docker build --tag recipes-api:1 .
+	@docker images
