@@ -26,7 +26,7 @@ before_script:
   - sleep 10
 
 script:
-  - npm run test
+  - npm qa
 
 matrix:
   include:
